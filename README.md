@@ -1,6 +1,7 @@
-# CIS6930FA24 -- ASSIGNMENT 0 -- FBI wanted list
+# cis6930fa24 -- Assignment 0 -- FBI wanted list
 
-**NAME:** Navya Durgam
+**Name:** Navya Durgam
+**UFID:** 33725389
 
 ---
 
@@ -12,6 +13,7 @@ This project retrieves data from the FBI's wanted list, either via API or from a
 - **Field Offices**: The FBI field offices handling the case.
 
 The data is formatted with the thorn character (`þ`) to separate fields. Fields containing multiple values, such as `subjects` or `field_offices`, are separated by commas within them. If a field is missing or empty, it will be left blank with no trailing thorn (`þ`) at the end of the record.
+
 ---
 
 ## How to install
@@ -23,7 +25,7 @@ The data is formatted with the thorn character (`þ`) to separate fields. Fields
 ### 2. Install dependencies:
    Required python packages can be installed using:
    ```bash
-   pipenv install -e 
+   pipenv install -e. 
    ```
 ### 3. Clone the repository:
    This project can be cloned using:
@@ -55,16 +57,23 @@ pipenv run python main.py --file-location fbi_data.json
 
 ---
 
+## Example Output
+
+Here’s a sample of what the formatted output looks like:
+VICTIM - BETH ELLEN VINSON - RALEIGH, NORTH CAROLINAþViCAP Homicides and Sexual Assaultsþ
+UNKNOWN SUSPECT - UNSOLVED HOMICIDE - AURORA, COLORADOþViCAP Homicides and Sexual Assaultsþ
+UNSOLVED/COLD CASE HOMICIDE - NEBRASKAþViCAP Homicides and Sexual Assaultsþ
+ABDULLAH AL-RIMIþSeeking Information - Terrorismþnewyork
+
 ## Functions
 
 ### main.py
 
-- **get_data_fromApi(page)**: Gets JSON data from the FBI API for the specified page.
+- **get_data_fromApi(page)**: Retrieves JSON data from the FBI API for the specified page.
 - **get_data_fromFile(location)**: Reads JSON data from the local file at the provided location.
-- **save_data_toJsonFile(data, fileName)**: Saves the fetched data to a `.json` file.
-- **format_data(data, outFile)**: Formats data using the thorn (`þ`) delimiter and saves it to a CSV file. It also prints the output to the console.
-- **main(page=None, file_location=None)**: Processes command-line arguments, getting data from either the API or a file and formatting it accordingly.
-
+- **save_data_toJsonFile(data, fileName)**: Saves the fetched data to a `.json` file with specified filename.
+- **format_data(data, outFile)**: Formats data using the thorn (`þ`) delimiter and saves it to a CSV file. It also prints the formatted data to the console.
+- **main(page=None, file_location=None)**: Processes command-line arguments to fetch data from either the API or a file, then formats and outputs the data.
 ---
 
 ## Assumptions
@@ -89,4 +98,11 @@ To run a specific test file, such as `test_download.py`:
 ```bash
 pipenv run python -m pytest tests/test_download.py -v
 ```
+
+## Conclusion
+
+This project showcases the functionality of fetching and formatting data from an external FBI API. The primary goal is to extract and format information from the "Most Wanted" list into a structured output using the thorn (`þ`) character as a delimiter. By handling both API data retrieval and local file input, the code provides a versatile solution for data processing.
+
+While the project effectively demonstrates data extraction and formatting, future enhancements could include supporting pagination for handling multiple pages of API data and extending the formatting to accommodate additional fields or requirements.
+
 ```
