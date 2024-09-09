@@ -1,6 +1,6 @@
 # cis6930fa24 -- Assignment 0 -- FBI wanted list
 
-**Name:** Navya Durgam
+**Name:** Navya Durgam  
 **UFID:** 33725389
 
 ---
@@ -33,7 +33,7 @@ The data is formatted with the thorn character (`þ`) to separate fields. Fields
    git clone https://github.com/NavyaDurgam98/cis6930fa24-assignment0.git
    ```
 
-
+---
 
 ## How to run
 
@@ -59,12 +59,13 @@ pipenv run python main.py --file-location fbi_data.json
 
 ## Example Output
 
-Here’s a sample of what the formatted output looks like:
-VICTIM - BETH ELLEN VINSON - RALEIGH, NORTH CAROLINAþViCAP Homicides and Sexual Assaultsþ
-UNKNOWN SUSPECT - UNSOLVED HOMICIDE - AURORA, COLORADOþViCAP Homicides and Sexual Assaultsþ
-UNSOLVED/COLD CASE HOMICIDE - NEBRASKAþViCAP Homicides and Sexual Assaultsþ
-ABDULLAH AL-RIMIþSeeking Information - Terrorismþnewyork
+Here’s a sample of what the formatted output looks like:  
+VICTIM - BETH ELLEN VINSON - RALEIGH, NORTH CAROLINAþViCAP Homicides and Sexual Assaultsþ  
+UNKNOWN SUSPECT - UNSOLVED HOMICIDE - AURORA, COLORADOþViCAP Homicides and Sexual Assaultsþ  
+UNSOLVED/COLD CASE HOMICIDE - NEBRASKAþViCAP Homicides and Sexual Assaultsþ  
+ABDULLAH AL-RIMIþSeeking Information - Terrorismþnewyork  
 
+---
 ## Functions
 
 ### main.py
@@ -98,7 +99,7 @@ To run a specific test file, such as `test_download.py`:
 ```bash
 pipenv run python -m pytest tests/test_download.py -v
 ```
-
+---
 ## Conclusion
 
 This project showcases the functionality of fetching and formatting data from an external FBI API. The primary goal is to extract and format information from the "Most Wanted" list into a structured output using the thorn (`þ`) character as a delimiter. By handling both API data retrieval and local file input, the code provides a versatile solution for data processing.
